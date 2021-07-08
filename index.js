@@ -5,7 +5,9 @@ const express = require('express')
 const app = express()
 
 // Port festlegen
-const PORT = 3000
+// So schauen wir, ob wir live sind, wenn ja kommt die PORT Varaible dorther
+// Ansonten nehmen wir die 3000
+const PORT = process.env.PORT || 3000
 
 // statische Dateien servieren
 app.use(express.static('public'))
